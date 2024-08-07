@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4bfff0;
+    margin: 0;
+}
+
+.todo-app {
+    text-align: center;
+    background-color: #f6ff00;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Fixed width for the to-do list */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    height: 80vh; /* Set a fixed height */
+    overflow: auto; /* Enable scrolling */
+}
+
+#taskInput {
+    padding: 10px;
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left within the input */
+    border: 1px solid #ccc; /* Optional: Adds a border around the input */
+    border-radius: 4px; /* Optional: Rounded corners for the input */
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center button horizontally */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensure the task list uses the full width */
+    max-height: calc(80vh - 70px); /* Ensure the list doesn't exceed the container height */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.task-item {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the container */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    justify-content: space-between; /* Space between checkbox, text, and button */
+    flex-wrap: wrap; /* Allow text to wrap onto multiple lines */
+    box-sizing: border-box;
+}
+
+.task-item span {
+    flex: 1;
+    margin-right: 10px;
+    text-align: left;
+    word-break: break-word; /* Ensure long words break and wrap */
+    overflow-wrap: break-word;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+.task-item button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    align-self: center; /* Align button vertically centered with text */
+}
+
+.task-item button:hover {
+    background-color: #c82333;
+}
